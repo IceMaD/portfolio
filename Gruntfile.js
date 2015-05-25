@@ -2,8 +2,16 @@ module.exports = function (grunt) {
     // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
     require('load-grunt-tasks')(grunt);
 
+    /**
+     * TODO move css.map
+     * TODO auto reduc images from src to web
+     */
     grunt.registerTask('compile-css', ['sass:app', 'autoprefixer:app']);
     grunt.registerTask('compile-js', ['browserify:app', 'uglify:app']);
+
+    grunt.registerTask('init', ['compile-js', 'compile-css', 'htmlmin']);
+
+    grunt.registerTask('default', ['watch']);
 
     grunt.initConfig({
 
@@ -83,7 +91,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'web/directive/ProgressBar.html': 'src/directive/ProgressBar.html',
-                    'web/directive/ExperienceWheel.html': 'src/directive/ExperienceWheel.html'
+                    'web/directive/ExperienceTimeline.html': 'src/directive/ExperienceTimeline.html'
                 }
             }
         },

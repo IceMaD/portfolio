@@ -7,7 +7,7 @@ Portfolio.config(require('./routing.coffee'))
 
 # Directive
 Portfolio.directive('progressbar', require('./directive/ProgressBar.coffee'))
-Portfolio.directive('wheel', require('./directive/ExperienceWheel.coffee'))
+Portfolio.directive('wheel', require('./directive/ExperienceTimeline.coffee'))
 
 # Controllers
 Portfolio.controller('AboutMe', require('./controller/AboutMe.coffee'))

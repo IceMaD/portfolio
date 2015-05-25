@@ -32837,7 +32837,7 @@ Portfolio.config(require('./routing.coffee'));
 
 Portfolio.directive('progressbar', require('./directive/ProgressBar.coffee'));
 
-Portfolio.directive('wheel', require('./directive/ExperienceWheel.coffee'));
+Portfolio.directive('wheel', require('./directive/ExperienceTimeline.coffee'));
 
 Portfolio.controller('AboutMe', require('./controller/AboutMe.coffee'));
 
@@ -32850,7 +32850,7 @@ Portfolio.controller('Realisations', require('./controller/Realisations.coffee')
 Portfolio.controller('Hire', require('./controller/Hire.coffee'));
 
 
-},{"./controller/AboutMe.coffee":7,"./controller/Experience.coffee":8,"./controller/Hire.coffee":9,"./controller/Realisations.coffee":10,"./controller/Skills.coffee":11,"./directive/ExperienceWheel.coffee":12,"./directive/ProgressBar.coffee":13,"./routing.coffee":14,"angular":5,"angular-animate":2,"angular-ui-router":3}],7:[function(require,module,exports){
+},{"./controller/AboutMe.coffee":7,"./controller/Experience.coffee":8,"./controller/Hire.coffee":9,"./controller/Realisations.coffee":10,"./controller/Skills.coffee":11,"./directive/ExperienceTimeline.coffee":12,"./directive/ProgressBar.coffee":13,"./routing.coffee":14,"angular":5,"angular-animate":2,"angular-ui-router":3}],7:[function(require,module,exports){
 var AboutMe;
 
 AboutMe = function($scope) {};
@@ -32962,17 +32962,17 @@ module.exports = ['$scope', Skills];
 
 
 },{}],12:[function(require,module,exports){
-var ExperienceWheel;
+var ExperienceTimeline;
 
-ExperienceWheel = function() {
+ExperienceTimeline = function() {
   return {
-    templateUrl: 'directive/ExperienceWheel.html',
+    templateUrl: 'directive/ExperienceTimeline.html',
     replace: true,
     restrict: 'E'
   };
 };
 
-module.exports = ExperienceWheel;
+module.exports = ExperienceTimeline;
 
 
 },{}],13:[function(require,module,exports){
@@ -33006,6 +33006,10 @@ Routing = function($stateProvider, $urlRouterProvider) {
     url: "/skills",
     templateUrl: "partials/Skills.html",
     controller: 'Skills'
+  }).state('experience', {
+    url: "/experience",
+    templateUrl: "partials/Experience.html",
+    controller: 'Experience'
   }).state('realisations', {
     url: "/realisations",
     templateUrl: "partials/Realisations.html",
