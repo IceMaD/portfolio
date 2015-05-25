@@ -32864,24 +32864,20 @@ module.exports = ['$scope', AboutMe];
 var Experience;
 
 Experience = function($scope) {
-  $scope.activeDate = 2009;
+  $scope.activeDate = 2014;
   $scope.dates = [
     {
       id: 2009,
       title: 'october 2009 – august 2013',
-      description: "I was in sandwich training at CFA'com for two degrees: CAP and BAC pro.\nGraphist for a company called Egeme two weeks out of three.\nLearning useless stuff the rest of the time.\nAnyway, this was my first job experience."
+      description: "I was in sandwich training at CFA'com for two degrees: CAP and BAC pro.\n\nGraphist for a company called Egeme two weeks out of three, learning useless stuff the rest of the time.\n\nAnyway, this was my first job experience."
     }, {
       id: 2013,
-      title: 're',
-      description: 'alalala'
+      title: 'July 2013 - July 2014',
+      description: "A year of full time course at cifacom ( now merged with Hétic ).\n\nThat's where I learned the basics of web developpement."
     }, {
       id: 2014,
-      title: 're',
-      description: 'alalala'
-    }, {
-      id: 2015,
-      title: 're',
-      description: 'alalala'
+      title: 'August 2014 - Now',
+      description: "Still at Hétic, but in sandwich training.\n\nI work at SmartAngels three weeks a month, go to school one week a month, and work as freelance for the last two weeks ( oh wait .. )"
     }
   ];
   return $scope.selectDate = function(date) {
