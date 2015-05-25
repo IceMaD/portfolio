@@ -2,6 +2,8 @@ Hexagon = () ->
   templateUrl: 'directive/Hexagon.html'
   replace: true
   restrict: 'E'
-  scope: {}
+  scope:
+    image: '='
+    imageWidth: '='
 
 module.exports = Hexagon;
