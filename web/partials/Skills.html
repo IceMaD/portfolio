@@ -1,0 +1,1 @@
+<div class="skills"><dl class="skills__description-list"><dt ng-repeat-start="category in categories" class="skills__description-list__title">{{ category.name }}</dt><dd ng-repeat-end class="skills__description-list__description"><progressbar ng-repeat="skill in category.skills" value="skill.value" text="skill.name"></dd></dl></div>

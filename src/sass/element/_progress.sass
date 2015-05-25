@@ -1,0 +1,20 @@
+.progress
+
+  &__title
+    display: inline-block
+    line-height: 1em
+    padding-left: 1em
+
+  &__bar
+    margin-top: 0.4em
+    font-size: .9em
+    background-color: $brand-color-hud-background
+
+    @include uno-radius(.5em)
+
+    &__progress
+      height: 100%
+      padding: .3em 1em
+      background-color: darken($brand-color, 20%)
+
+      @include uno-radius(.5em)

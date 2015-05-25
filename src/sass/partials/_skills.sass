@@ -1,0 +1,36 @@
+.skills
+
+  &__description-list
+    position: absolute
+    z-index: 5
+    right: 0
+    top: 3em
+
+    width: 600px
+
+    max-height: 100%
+    overflow: auto
+    padding: 2em 1em
+    @include neon-border(white, 1)
+
+    white-space: nowrap
+
+    transform: rotateY(-20deg)
+
+    &__description, &__title
+      line-height: $base-line-height
+
+    &__description + &__title
+      margin-top: 1em
+
+    &__title
+      background-color: $brand-color-hud-background
+      padding: .2em .8em .1em
+
+      @include uno-radius(.5em)
+
+    &__description
+      padding-left: 1em
+
+      & .progress
+        margin-top: .5em

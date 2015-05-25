@@ -1,0 +1,32 @@
+body
+  background: $background-color
+  color: #ffffff
+  font-family: 'Orbitron', sans-serif
+  font-size: 18px
+  position: relative
+  height: 100vh
+  width: 100vw
+  display: table-cell
+  vertical-align: middle
+  text-align: center
+  overflow: hidden
+
+  &:before
+    content: ''
+    top: 0
+    left: 0
+    opacity: .4
+    background: url('https://s-media-cache-ak0.pinimg.com/originals/74/1f/e6/741fe6a48bc609a1ebc07e3f456cf29a.jpg') no-repeat center
+    background-size: cover
+    position: absolute
+    width: 100%
+    height: 100%
+
+  .container
+    display: inline-block
+    width: $conainer-width
+    height: $conainer-height
+    text-align: left
+    position: relative
+    perspective: $perpective
+    transform-style: preserve-3d

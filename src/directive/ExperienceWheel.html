@@ -1,0 +1,7 @@
+<div class="experience__wheel">
+    <div class="experience__wheel__item" ng-repeat="date in years | orderBy:'-year'" ng-click="selectYear(date)">
+        <a class="experience__wheel__item__link" href="">
+            {{ date.year }}
+        </a>
+    </div>
+</div>
