@@ -32845,8 +32845,12 @@ Portfolio.controller('Skills', require('./controller/Skills.coffee'));
 
 Portfolio.controller('Experience', require('./controller/Experience.coffee'));
 
+Portfolio.controller('Realisations', require('./controller/Realisations.coffee'));
 
-},{"./controller/AboutMe.coffee":7,"./controller/Experience.coffee":8,"./controller/Skills.coffee":9,"./directive/ExperienceWheel.coffee":10,"./directive/ProgressBar.coffee":11,"./routing.coffee":12,"angular":5,"angular-animate":2,"angular-ui-router":3}],7:[function(require,module,exports){
+Portfolio.controller('Hire', require('./controller/Hire.coffee'));
+
+
+},{"./controller/AboutMe.coffee":7,"./controller/Experience.coffee":8,"./controller/Hire.coffee":9,"./controller/Realisations.coffee":10,"./controller/Skills.coffee":11,"./directive/ExperienceWheel.coffee":12,"./directive/ProgressBar.coffee":13,"./routing.coffee":14,"angular":5,"angular-animate":2,"angular-ui-router":3}],7:[function(require,module,exports){
 var AboutMe;
 
 AboutMe = function($scope) {};
@@ -32884,6 +32888,22 @@ module.exports = ['$scope', Experience];
 
 
 },{}],9:[function(require,module,exports){
+var Hire;
+
+Hire = function($scope) {};
+
+module.exports = ['$scope', Hire];
+
+
+},{}],10:[function(require,module,exports){
+var Realisations;
+
+Realisations = function($scope) {};
+
+module.exports = ['$scope', Realisations];
+
+
+},{}],11:[function(require,module,exports){
 var Skills;
 
 Skills = function($scope) {
@@ -32941,7 +32961,7 @@ Skills = function($scope) {
 module.exports = ['$scope', Skills];
 
 
-},{}],10:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 var ExperienceWheel;
 
 ExperienceWheel = function() {
@@ -32955,7 +32975,7 @@ ExperienceWheel = function() {
 module.exports = ExperienceWheel;
 
 
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 var ProgressBar;
 
 ProgressBar = function() {
@@ -32973,7 +32993,7 @@ ProgressBar = function() {
 module.exports = ProgressBar;
 
 
-},{}],12:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 var Routing;
 
 Routing = function($stateProvider, $urlRouterProvider) {
@@ -32986,10 +33006,14 @@ Routing = function($stateProvider, $urlRouterProvider) {
     url: "/skills",
     templateUrl: "partials/Skills.html",
     controller: 'Skills'
-  }).state('experience', {
-    url: "/experience",
-    templateUrl: "partials/Experience.html",
-    controller: 'Experience'
+  }).state('realisations', {
+    url: "/realisations",
+    templateUrl: "partials/Realisations.html",
+    controller: 'Realisations'
+  }).state('hire', {
+    url: "/hire",
+    templateUrl: "partials/Hire.html",
+    controller: 'Hire'
   });
 };
 

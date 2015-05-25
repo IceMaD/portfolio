@@ -71,7 +71,9 @@ module.exports = function (grunt) {
                 files: {
                     'web/partials/AboutMe.html': 'src/partials/AboutMe.html',
                     'web/partials/Experience.html': 'src/partials/Experience.html',
-                    'web/partials/Skills.html': 'src/partials/Skills.html'
+                    'web/partials/Skills.html': 'src/partials/Skills.html',
+                    'web/partials/Realisations.html': 'src/partials/Realisations.html',
+                    'web/partials/Hire.html': 'src/partials/Hire.html'
                 }
             },
             directive: {

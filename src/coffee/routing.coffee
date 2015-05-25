@@ -13,10 +13,20 @@ Routing = ($stateProvider, $urlRouterProvider) ->
       templateUrl: "partials/Skills.html",
       controller: 'Skills'
     })
-    .state('experience', {
-      url: "/experience",
-      templateUrl: "partials/Experience.html",
-      controller: 'Experience'
+#    .state('experience', {
+#      url: "/experience",
+#      templateUrl: "partials/Experience.html",
+#      controller: 'Experience'
+#    })
+    .state('realisations', {
+      url: "/realisations",
+      templateUrl: "partials/Realisations.html",
+      controller: 'Realisations'
+    })
+    .state('hire', {
+      url: "/hire",
+      templateUrl: "partials/Hire.html",
+      controller: 'Hire'
     })
 
 module.exports = ['$stateProvider', '$urlRouterProvider', Routing];
