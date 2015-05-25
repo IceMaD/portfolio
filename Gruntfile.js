@@ -91,7 +91,8 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'web/directive/ProgressBar.html': 'src/directive/ProgressBar.html',
-                    'web/directive/ExperienceTimeline.html': 'src/directive/ExperienceTimeline.html'
+                    'web/directive/ExperienceTimeline.html': 'src/directive/ExperienceTimeline.html',
+                    'web/directive/Hexagon.html': 'src/directive/Hexagon.html'
                 }
             }
         },

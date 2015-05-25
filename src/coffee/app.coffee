@@ -11,6 +11,7 @@ Portfolio.filter 'nl2br', require './filter/nl2br.coffee'
 # Directives
 Portfolio.directive 'progressbar', require './directive/ProgressBar.coffee'
 Portfolio.directive 'timeline', require './directive/ExperienceTimeline.coffee'
+Portfolio.directive 'hexagon', require './directive/Hexagon.coffee'
 
 # Controllers
 Portfolio.controller 'AboutMe', require './controller/AboutMe.coffee'

@@ -32841,6 +32841,8 @@ Portfolio.directive('progressbar', require('./directive/ProgressBar.coffee'));
 
 Portfolio.directive('timeline', require('./directive/ExperienceTimeline.coffee'));
 
+Portfolio.directive('hexagon', require('./directive/Hexagon.coffee'));
+
 Portfolio.controller('AboutMe', require('./controller/AboutMe.coffee'));
 
 Portfolio.controller('Skills', require('./controller/Skills.coffee'));
@@ -32852,7 +32854,7 @@ Portfolio.controller('Realisations', require('./controller/Realisations.coffee')
 Portfolio.controller('Hire', require('./controller/Hire.coffee'));
 
 
-},{"./controller/AboutMe.coffee":7,"./controller/Experience.coffee":8,"./controller/Hire.coffee":9,"./controller/Realisations.coffee":10,"./controller/Skills.coffee":11,"./directive/ExperienceTimeline.coffee":12,"./directive/ProgressBar.coffee":13,"./filter/nl2br.coffee":14,"./routing.coffee":15,"angular":5,"angular-animate":2,"angular-ui-router":3}],7:[function(require,module,exports){
+},{"./controller/AboutMe.coffee":7,"./controller/Experience.coffee":8,"./controller/Hire.coffee":9,"./controller/Realisations.coffee":10,"./controller/Skills.coffee":11,"./directive/ExperienceTimeline.coffee":12,"./directive/Hexagon.coffee":13,"./directive/ProgressBar.coffee":14,"./filter/nl2br.coffee":15,"./routing.coffee":16,"angular":5,"angular-animate":2,"angular-ui-router":3}],7:[function(require,module,exports){
 var AboutMe;
 
 AboutMe = function($scope) {};
@@ -32977,6 +32979,21 @@ module.exports = ExperienceTimeline;
 
 
 },{}],13:[function(require,module,exports){
+var Hexagon;
+
+Hexagon = function() {
+  return {
+    templateUrl: 'directive/Hexagon.html',
+    replace: true,
+    restrict: 'E',
+    scope: {}
+  };
+};
+
+module.exports = Hexagon;
+
+
+},{}],14:[function(require,module,exports){
 var ProgressBar;
 
 ProgressBar = function() {
@@ -32994,7 +33011,7 @@ ProgressBar = function() {
 module.exports = ProgressBar;
 
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 var nl2br;
 
 nl2br = function($sce) {
@@ -33008,7 +33025,7 @@ nl2br = function($sce) {
 module.exports = ['$sce', nl2br];
 
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 var Routing;
 
 Routing = function($stateProvider, $urlRouterProvider) {
