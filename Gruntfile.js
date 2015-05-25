@@ -4,12 +4,11 @@ module.exports = function (grunt) {
 
     /**
      * TODO move css.map
-     * TODO auto reduc images from src to web
      */
     grunt.registerTask('compile-css', ['sass:app', 'autoprefixer:app']);
     grunt.registerTask('compile-js', ['browserify:app', 'uglify:app']);
 
-    grunt.registerTask('init', ['compile-js', 'compile-css', 'htmlmin']);
+    grunt.registerTask('init', ['compile-js', 'compile-css', 'htmlmin', 'imagemin']);
 
     grunt.registerTask('default', ['watch']);
 
@@ -51,6 +50,14 @@ module.exports = function (grunt) {
             css: {
                 files: ['src/sass/*.sass','src/sass/**/*.sass','src/sass/**/**/*.sass'],
                 tasks: ['compile-css'],
+                options: {
+                    interrupt: true,
+                    livereload: 35729
+                }
+            },
+            images: {
+                files: ['src/images/*.{png,jpg,gif}', 'src/images/**/*.{png,jpg,gif}'],
+                tasks: ['newer:imagemin'],
                 options: {
                     interrupt: true,
                     livereload: 35729
@@ -139,6 +146,20 @@ module.exports = function (grunt) {
                 files: {
                     'web/assets/app.min.js': ['web/assets/app.js']
                 }
+            }
+        },
+
+        /**
+         * Images
+         */
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/images/',
+                    src: ['*.{png,jpg,gif}', '**/*.{png,jpg,gif}'],
+                    dest: 'web/assets/images/'
+                }]
             }
         }
     });
