@@ -32837,7 +32837,7 @@ Portfolio.config(require('./routing.coffee'));
 
 Portfolio.directive('progressbar', require('./directive/ProgressBar.coffee'));
 
-Portfolio.directive('wheel', require('./directive/ExperienceTimeline.coffee'));
+Portfolio.directive('timeline', require('./directive/ExperienceTimeline.coffee'));
 
 Portfolio.controller('AboutMe', require('./controller/AboutMe.coffee'));
 
