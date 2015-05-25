@@ -1,61 +1,42 @@
 Skills = ($scope) ->
   $scope.categories = [
-    {
-      name: 'PHP',
+      name: 'PHP'
       skills: [
-        {
-          name: 'Symfony2',
-          value: 95
-        }
+        name: 'Symfony2'
+        value: 95
       ]
-    },
-    {
-      name: 'Javascript',
+    ,
+      name: 'Javascript'
       skills: [
-        {
-          name: 'Angular',
-          value: 50
-        },
-        {
-          name: 'Backbone',
-          value: 20
-        },
-        {
-          name: 'jQuery',
-          value: 90
-        }
+        name: 'Angular'
+        value: 50
+      ,
+        name: 'Backbone'
+        value: 20
+      ,
+        name: 'jQuery'
+        value: 90
       ]
-    },
-    {
-      name: 'Integration',
+    ,
+      name: 'Integration'
       skills: [
-        {
-          name: 'HTML5',
-          value: 95
-        },
-        {
-          name: 'CSS3',
-          value: 80
-        }
+        name: 'HTML5'
+        value: 95
+      ,
+        name: 'CSS3'
+        value: 80
       ]
-    },
-    {
-      name: 'TeamWork',
+    ,
+      name: 'TeamWork'
       skills: [
-        {
-          name: 'Git',
-        },
-        {
-          name: 'GitHub',
-        },
-        {
-          name: 'Scrum',
-        },
-        {
-          name: 'Trello',
-        }
+        name: 'Git'
+      ,
+        name: 'GitHub'
+      ,
+        name: 'Scrum'
+      ,
+        name: 'Trello'
       ]
-    }
   ]
 
 module.exports = ['$scope', Skills];

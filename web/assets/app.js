@@ -32835,6 +32835,8 @@ Portfolio = angular.module('Portfolio', [require('angular-ui-router'), require('
 
 Portfolio.config(require('./routing.coffee'));
 
+Portfolio.filter('nl2br', require('./filter/nl2br.coffee'));
+
 Portfolio.directive('progressbar', require('./directive/ProgressBar.coffee'));
 
 Portfolio.directive('timeline', require('./directive/ExperienceTimeline.coffee'));
@@ -32850,7 +32852,7 @@ Portfolio.controller('Realisations', require('./controller/Realisations.coffee')
 Portfolio.controller('Hire', require('./controller/Hire.coffee'));
 
 
-},{"./controller/AboutMe.coffee":7,"./controller/Experience.coffee":8,"./controller/Hire.coffee":9,"./controller/Realisations.coffee":10,"./controller/Skills.coffee":11,"./directive/ExperienceTimeline.coffee":12,"./directive/ProgressBar.coffee":13,"./routing.coffee":14,"angular":5,"angular-animate":2,"angular-ui-router":3}],7:[function(require,module,exports){
+},{"./controller/AboutMe.coffee":7,"./controller/Experience.coffee":8,"./controller/Hire.coffee":9,"./controller/Realisations.coffee":10,"./controller/Skills.coffee":11,"./directive/ExperienceTimeline.coffee":12,"./directive/ProgressBar.coffee":13,"./filter/nl2br.coffee":14,"./routing.coffee":15,"angular":5,"angular-animate":2,"angular-ui-router":3}],7:[function(require,module,exports){
 var AboutMe;
 
 AboutMe = function($scope) {};
@@ -32862,25 +32864,28 @@ module.exports = ['$scope', AboutMe];
 var Experience;
 
 Experience = function($scope) {
-  $scope.years = [
+  $scope.activeDate = 2009;
+  $scope.dates = [
     {
-      year: 2009
+      id: 2009,
+      title: 'october 2009 – august 2013',
+      description: "I was in sandwich training at CFA'com for two degrees: CAP and BAC pro.\nGraphist for a company called Egeme two weeks out of three.\nLearning useless stuff the rest of the time.\nAnyway, this was my first job experience."
     }, {
-      year: 2010
+      id: 2013,
+      title: 're',
+      description: 'alalala'
     }, {
-      year: 2011
+      id: 2014,
+      title: 're',
+      description: 'alalala'
     }, {
-      year: 2012
-    }, {
-      year: 2013
-    }, {
-      year: 2014
-    }, {
-      year: 2015
+      id: 2015,
+      title: 're',
+      description: 'alalala'
     }
   ];
-  return $scope.selectYear = function(date) {
-    return console.log(date);
+  return $scope.selectDate = function(date) {
+    return $scope.activeDate = date.id;
   };
 };
 
@@ -32994,6 +32999,20 @@ module.exports = ProgressBar;
 
 
 },{}],14:[function(require,module,exports){
+var nl2br;
+
+nl2br = function($sce) {
+  return function(input) {
+    if (input !== void 0) {
+      return $sce.trustAsHtml(input.replace(/\n/g, '<br/>'));
+    }
+  };
+};
+
+module.exports = ['$sce', nl2br];
+
+
+},{}],15:[function(require,module,exports){
 var Routing;
 
 Routing = function($stateProvider, $urlRouterProvider) {
