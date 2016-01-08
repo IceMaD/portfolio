@@ -1,0 +1,138 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block; }
+
+html {
+  font-family: Inconsolata, sans-serif;
+  font-size: 62.5%;
+  font-weight: 400; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+  *:focus {
+    outline: none; }
+
+progress {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none; }
+
+/* SCSS file to avoid map parsing error in SASS files */
+.terminal {
+  color: #ecf0f1;
+  cursor: default;
+  direction: ltr;
+  font-family: Inconsolata, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: left;
+  text-indent: 0;
+  text-transform: none;
+  visibility: visible;
+  white-space: normal;
+  word-spacing: normal;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: black; }
+  .terminal_input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0; }
+  .terminal_line {
+    margin: 0.2em;
+    min-height: 1em;
+    white-space: pre-wrap; }
+    .terminal_line.--force {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .terminal_line.--force:before {
+      content: "icemad@portfolio:~$";
+      margin-right: 0.5rem; }
+  .terminal_word.--prompt:before {
+    content: "icemad@portfolio:~$";
+    margin-right: 0.5rem; }
+  .terminal_word.--warning {
+    color: #ff9e1e; }
+  .terminal_word.--data {
+    color: #e4d973; }
+  .terminal_word.--emphasis {
+    font-weight: 700; }
+  .terminal_word.--info {
+    color: #009CA9; }
+  .terminal_word.--success {
+    color: #17B111; }
+  .terminal_word.--smell {
+    color: saddlebrown; }
+  .terminal_word.--error {
+    background-color: #e74c3c;
+    color: #ecf0f1;
+    box-shadow: 2px 0 0 0 #e74c3c, -2px 0 0 0 #e74c3c; }
+  .terminal.--winter {
+    background: white;
+    color: #2c3e50; }
+  .terminal.--winter .terminal_word.--data {
+    color: #948549; }
+  .terminal.--winter .terminal_word.--warning {
+    color: orange; }
+  .terminal.--winter .terminal_word.--info {
+    color: #007a8f; }
+  .terminal.--winter .terminal_word.--smell {
+    color: #7c3a16; }
+  .terminal.--winter .terminal_word.--success {
+    color: #168611; }
+  .terminal.--summer {
+    background: lightblue;
+    color: #2c3e50; }
+  .terminal.--autumn {
+    background: #b18777; }
