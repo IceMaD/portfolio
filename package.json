@@ -16,7 +16,8 @@
     "grunt-newer": "~1.1.0",
     "angular-sanitize": "~1.4.8",
     "grunt-contrib-copy": "~0.8.2",
-    "grunt-shell": "~1.1.2"
+    "grunt-shell": "~1.1.2",
+    "grunt-inline": "~0.3.6"
   },
   "dependencies": {
     "zepto-browserify": "~1.1.6-1",

@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     grunt.registerTask('compile-css', ['sass:app', 'autoprefixer:app']);
     grunt.registerTask('compile-js', ['browserify:app', 'uglify:app']);
 
-    grunt.registerTask('init', ['compile-js', 'compile-css', 'htmlmin', 'copy']);
+    grunt.registerTask('init', ['compile-js', 'compile-css', 'htmlmin', 'copy', 'inline']);
 
     grunt.registerTask('default', ['watch']);
 
@@ -134,6 +134,12 @@ module.exports = function (grunt) {
         shell: {
             deploy: {
                 command: 'git subtree push --prefix web origin gh-pages'
+            }
+        },
+        inline: {
+            index: {
+                src: 'web/index.html',
+                dest: 'web/index.html'
             }
         }
     });
