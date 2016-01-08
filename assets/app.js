@@ -26455,7 +26455,7 @@ require('./angular');
 module.exports = angular;
 
 },{"./angular":1}],3:[function(require,module,exports){
-var angular, portfolio;
+var angular, portfolio, s, tag;
 
 angular = require('angular');
 
@@ -26474,6 +26474,24 @@ portfolio.factory('TerminalState', require('./terminal/TerminalState.coffee'));
 portfolio.service('PromptHistory', require('./terminal/PromptHistory.coffee'));
 
 portfolio.service('Commands', require('./terminal/Commands.coffee'));
+
+window.WebFontConfig = {
+  google: {
+    families: ['Inconsolata:400,700:latin']
+  }
+};
+
+tag = document.createElement('script');
+
+tag.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+
+tag.type = 'text/javascript';
+
+tag.async = 'true';
+
+s = document.getElementsByTagName('script')[0];
+
+s.parentNode.insertBefore(tag, s);
 
 
 },{"./routing.coffee":4,"./terminal/Commands.coffee":5,"./terminal/LineManager.coffee":6,"./terminal/PromptHistory.coffee":7,"./terminal/TerminalDirective.coffee":8,"./terminal/TerminalState.coffee":9,"./terminal/WordFormatter.coffee":10,"angular":2}],4:[function(require,module,exports){
