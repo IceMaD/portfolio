@@ -26635,7 +26635,7 @@ module.exports = [
 module.exports = [
   function() {
     return {
-      list: ['color default', 'color sky', 'help', 'list', 'pseudo', 'details', 'name', 'job'],
+      list: ['demo', 'color winter'],
       current: 0,
       enabled: false,
       push: function(prompt) {

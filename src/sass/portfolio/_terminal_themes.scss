@@ -1,11 +1,64 @@
-/* SCSS file to avoid map parsing error in SASS files */
+@import "conf/variables";
+
+$orange-sun-enforced: darken($orange-sun, 10%);
+$yellow-monokai-enforced: darken($yellow-monokai, 30%);
+
+/**
+
+  SCSS file to avoid map parsing error in SASS files
+
+  Theme layout:
+
+$theme: (
+  'bg': #fff,
+  'color': #fff,
+  'data-bg': #fff,
+  'data-color': #fff,
+  'warning-bg': #fff,
+  'warning-color': #fff,
+  'error-bg': #fff,
+  'error-color': #fff,
+  'info-bg': #fff,
+  'info-color': #fff,
+  'smell-bg': #fff,
+  'smell-color': #fff,
+  'success-bg': #fff,
+  'success-color': #fff,
+);
+
+*/
 
 $winter-theme: (
   'bg': white,
   'color': $grey-midnight,
   'info-color': $blue-sherpa,
-  'data-color': #948549,
-  'warning-color': orange,
+  'data-color': $yellow-monokai-enforced,
+  'warning-color': $orange-sun-enforced,
   'smell-color': #7c3a16,
   'success-color': #168611,
-)
+);
+
+$summer-theme: (
+  'bg': lightblue,
+  'color': $grey-midnight,
+  'data-color': $yellow-monokai-enforced,
+  'info-color': $blue-sherpa,
+  'warning-color': $orange-sun-enforced,
+);
+
+$autumn-theme: (
+  'bg': #fff,
+  'color': #fff,
+  'data-bg': #fff,
+  'data-color': #fff,
+  'warning-bg': #fff,
+  'warning-color': #fff,
+  'error-bg': #fff,
+  'error-color': #fff,
+  'info-bg': #fff,
+  'info-color': #fff,
+  'smell-bg': #fff,
+  'smell-color': #fff,
+  'success-bg': #fff,
+  'success-color': #fff,
+);

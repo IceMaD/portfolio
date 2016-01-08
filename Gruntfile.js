@@ -65,6 +65,7 @@ module.exports = function (grunt) {
         sass: {
             app: {
                 options: {
+                    style: 'compressed',
                     loadPath: 'src/sass'
                 },
                 files: {
