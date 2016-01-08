@@ -26584,6 +26584,11 @@ module.exports = [
         help: 'Change the color of the terminal.',
         man: "Change the color of the terminal.\n\nAvailable themes : " + (colors.join(', ')) + "\n\nExample: " + (word('emphasis')('theme winter'))
       },
+      works: {
+        exec: function() {
+          return word('info')('The Only real project I worked on is ' + word('link')('https://www.smartangels.fr/', 'SmartAngels') + '. School projects are uninteresting ... really !');
+        }
+      },
       color: alias('theme'),
       name: {
         exec: function() {

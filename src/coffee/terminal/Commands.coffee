@@ -136,6 +136,9 @@ module.exports = ['WordFormatter', 'TerminalState', (word, terminal)->
 
         Example: #{word('emphasis')('theme winter')}
         """
+    works:
+      exec: ->
+        return word('info')('The Only real project I worked on is ' + word('link')('https://www.smartangels.fr/', 'SmartAngels') + '. School projects are uninteresting ... really !')
 
     color: alias('theme')
 
