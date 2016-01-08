@@ -26706,7 +26706,7 @@ module.exports = [
       scope: {},
       link: function(scope, element, attrs) {
         var input, refresh, selectPrompt;
-        input = element.find('input')[0];
+        input = null;
         refresh = function() {
           scope.prompt = '';
           return $timeout(function() {
@@ -26735,9 +26735,8 @@ module.exports = [
         }, 5000);
         scope.lines = [];
         scope.focus = function(event) {
-          if (event.target === element[0]) {
-            return input.focus();
-          }
+          input = input != null ? input : element.find('input')[0];
+          return input.focus();
         };
         scope.getClass = function() {
           if (state.color) {
