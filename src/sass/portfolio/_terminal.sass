@@ -1,0 +1,90 @@
+@import "lib/ceyd"
+@import "conf/variables"
+@import "terminal_themes"
+
+@mixin namespace
+  &:before
+    content: 'icemad@portfolio:~$'
+    margin-right: rem(5px)
+
+@mixin theme($name, $colors)
+
+  &.--#{$name}
+    @if map_has_key($colors, 'bg')
+      background: map_get($colors, 'bg')
+
+    @if map_has_key($colors, 'color')
+      color: map_get($colors, 'color')
+
+  &.--#{$name} &_word
+
+    $modifiers: 'data' 'warning' 'emphasis' 'error' 'info' 'smell' 'success'
+
+    @each $modifier in $modifiers
+      &.--#{$modifier}
+        @if map_has_key($colors, $modifier + '-bg')
+          background: map_get($colors, $modifier + '-bg')
+          box-shadow: 2px 0 0 0 map_get($colors, $modifier + '-bg'), -2px 0 0 0 map_get($colors, $modifier + '-bg')
+
+        @if map_has_key($colors, $modifier + '-color')
+          color: map_get($colors, $modifier + '-color')
+
+.terminal
+  @include scope
+
+  width: 100vw
+  height: 100vh
+  overflow-x: hidden
+  overflow-y: auto
+  background-color: black
+
+  &_input
+    width: 100%
+    border: none
+    background-color: transparent
+    color: inherit
+    font-family: inherit
+    font-size: inherit
+    padding: 0
+
+  &_line
+    margin: .2em
+    min-height: 1em
+    white-space: pre-wrap
+
+    &.--force
+      display: flex
+
+    &.--force
+      @include namespace
+
+  &_word
+    &.--prompt
+      @include namespace
+
+    &.--warning
+      color: $orange-sun
+
+    &.--data
+      color: $yellow-monokai
+
+    &.--emphasis
+      font-weight: $w-bold
+
+    &.--info
+      color: $blue-bondi
+
+    &.--success
+      color: $green-palma
+
+    &.--smell
+      color: saddlebrown
+
+    &.--error
+      background-color: $red-alizarin
+      color: $grey-clouds
+      box-shadow: 2px 0 0 0 $red-alizarin, -2px 0 0 0 $red-alizarin
+
+  @include theme('winter', $winter-theme)
+  @include theme('summer', ('bg': lightblue, 'color': $grey-midnight))
+  @include theme('autumn', ('bg': #b18777))

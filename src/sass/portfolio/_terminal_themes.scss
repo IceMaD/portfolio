@@ -1,0 +1,11 @@
+/* SCSS file to avoid map parsing error in SASS files */
+
+$winter-theme: (
+  'bg': white,
+  'color': $grey-midnight,
+  'info-color': $blue-sherpa,
+  'data-color': #948549,
+  'warning-color': orange,
+  'smell-color': #7c3a16,
+  'success-color': #168611,
+)

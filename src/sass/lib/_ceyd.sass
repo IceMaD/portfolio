@@ -1,0 +1,27 @@
+@import "../conf/variables"
+
+$color: $text-color
+$font-family: $font
+
+@mixin scope
+  color: $color
+  cursor: default
+  direction: ltr
+  font-family: $font-family
+  font-size: 1.6rem
+  font-style: normal
+  font-weight: 300
+  letter-spacing: 0
+  line-height: 1
+  text-align: left
+  text-indent: 0
+  text-transform: none
+  visibility: visible
+  white-space: normal
+  word-spacing: normal
+
+@function reverse-em($em-size, $em)
+  @return #{$em-size/$em}em
+
+@function rem($pxSize)
+  @return #{$pxSize / 10px}rem
