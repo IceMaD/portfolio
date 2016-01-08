@@ -1,7 +1,9 @@
-<div class="terminal" ng-class="getClass()" ng-click="focus($event)">
+<div class="terminal" ng-class="getClass()">
     <p class="terminal_line" ng-repeat="line in lines" ng-bind-html="line.html()"></p>
 
     <form ng-submit="submit()" class="terminal_line --force">
         <input type="text" class="terminal_input" title="prompt" ng-model="prompt" autofocus ng-keydown="onKeyDown($event)">
     </form>
+
+    <div class="terminal_empty-space" ng-click="focus($event)"></div>
 </div>

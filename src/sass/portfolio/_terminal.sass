@@ -37,6 +37,8 @@
   overflow-x: hidden
   overflow-y: auto
   background-color: black
+  display: flex
+  flex-direction: column
 
   &_input
     width: 100%
@@ -45,7 +47,11 @@
     color: inherit
     font-family: inherit
     font-size: inherit
+    height: 1em
     padding: 0
+
+  &_empty-space
+    flex: 0px 1 1
 
   &_line
     margin: .2em

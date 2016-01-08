@@ -14,13 +14,11 @@ portfolio.factory 'TerminalState', require './terminal/TerminalState.coffee'
 portfolio.service 'PromptHistory', require './terminal/PromptHistory.coffee'
 portfolio.service 'Commands', require './terminal/Commands.coffee'
 
-
 window.WebFontConfig =
   google:
     families: [
       'Inconsolata:400,700:latin'
     ]
-
 
 tag = document.createElement 'script'
 tag.src = (if 'https:' == document.location.protocol then 'https' else 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js'

@@ -6,7 +6,7 @@ module.exports = ['LineManager', 'PromptHistory', 'TerminalState', '$timeout', (
     scope: {}
     link: (scope, element, attrs) ->
 
-      input = element.find('input')[0]
+      input = null
 
       refresh = ->
         scope.prompt = ''
@@ -33,7 +33,10 @@ module.exports = ['LineManager', 'PromptHistory', 'TerminalState', '$timeout', (
       scope.lines = []
 
       scope.focus = (event) ->
-        input.focus() if event.target == element[0]
+
+        input = if input? then input else element.find('input')[0]
+
+        input.focus()
 
       scope.getClass = ->
         return if state.color then '--' + state.color else false
